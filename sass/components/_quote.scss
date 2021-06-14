@@ -1,0 +1,100 @@
+.quote{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 3rem;
+    padding-bottom: 10rem;
+
+    @include device(medium){
+        grid-template-columns: 1fr;
+        grid-row-gap: 12rem;
+    }
+
+
+    &__box{
+        // background-image: linear-gradient(to bottom right, rgba(var(--primary-light), .5), rgba(var(--primary), .5));
+        // background-color: rgba(255,255,255, .6);
+        background-color: rgba(var(--primary-light), .6);
+        padding: 6rem 2rem 3rem 5rem;
+        color: #000;
+        border-radius: 1rem;
+        position: relative;
+
+        @include device(large){
+            padding: 5rem 1.5rem 2rem 4rem;
+        }
+
+        &::after{
+            content: "";
+            height: 2rem;
+            width: 2rem;
+            background-color: rgba(var(--primary-light), .6);
+            position: absolute;
+            bottom: -1.98rem;
+            left: 8rem;
+            clip-path: polygon(0 0, 100% 0, 50% 80%);
+            @include device(small){
+                bottom: -1.96rem;
+            }
+        }
+    }
+
+
+    &__text{
+        font-size: 2rem;
+    }
+
+    &__heading{
+        text-align: center;
+        margin: 1rem 0 7rem 0;
+        // color: #fff;
+    }
+
+    &__sign{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 3.5rem;
+        height: 2.9rem;
+        @include device(small){
+            width: 2.8rem;
+            height: 2.2rem;
+        }
+    }
+
+    &__user{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        bottom: -10rem;
+        @include device(medium){
+            bottom: -12rem;
+            margin-bottom: 1rem;
+        }
+        @include device(small){
+            bottom: -10rem;
+            left: 5rem;
+        }
+    }
+
+    &__img{
+        width: 20%;
+        height: 20%;
+        border-radius: 50%;
+        @include device(medium){
+            width: 12%;
+            height: 12%;
+        }
+        @include device(small){
+            width: 14%;
+            height: 14%;
+        }
+    }
+
+    &__name{
+        font-size: 1.8rem;
+        color: rgba(var(--primary), 1);
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+}

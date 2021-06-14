@@ -1,0 +1,50 @@
+.show{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 7rem;
+    position: relative;
+    top: -7rem;
+    z-index: 3;
+
+    @include device(big){
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 5rem;
+        grid-column-gap: 5rem;
+    }
+
+    @include device(small){
+        grid-template-columns: 1fr;
+    }
+
+    &__box{
+        @include device(big){
+            display: flex;
+            flex-direction: column;
+        }
+        @include device(small){
+            align-items: center;
+        }
+    }    
+
+    &__heading{
+        position: relative;
+        top: -15rem;
+        z-index: 3;
+        text-align: center;
+    }
+
+    &__text{
+        margin-top: 1rem;
+        @include device(small){
+            flex: 1;
+        }
+    }
+
+    &__icon{
+
+        @include device(small){
+            flex: .5;
+            margin-bottom: 1rem;
+        }
+    }
+}

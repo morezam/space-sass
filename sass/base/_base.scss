@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    @include device(big){
+        font-size: 56.25%;
+    }
+    @include device(small){
+        font-size: 50%;
+    }
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(221, 221, 221);
+    color: var(--gray-2);
+    line-height: 1.5;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

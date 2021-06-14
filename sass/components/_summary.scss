@@ -1,0 +1,59 @@
+.summary{
+    margin: 7rem auto;
+    width: 50%;
+    background-color: rgba(var(--primary-dark-1), 0.8);
+    padding: 3rem;
+    border-radius: 1rem;
+
+    @include device(large){
+        width: 65%;
+    }
+    @include device(large){
+        width: 85%;
+    }
+    @include device(big){
+        width: 100%;
+    }
+
+    
+
+    &__details{
+        padding: 2rem;
+        cursor: pointer;
+        color: var(--gray-5);
+    }
+
+    &__summary{
+        font-size: 2.5rem;
+        &:focus{
+            outline: none;
+            border: 0;
+        }
+    }
+
+    &__text{
+        color: inherit;
+        padding: 2rem 0;
+        font-size: 2.1rem;
+    }
+
+    &__heading{
+        text-align: center;
+    }
+
+    &__shape{
+        position: absolute;
+        left: 5rem;
+        top: 5rem;
+        height: 45.5rem;
+        width: 45.5rem;
+        @include device(big){
+            width: 25.5rem;
+            height: 25.5rem;
+            top: 20rem;
+        }
+        @include device(small){
+            display: none;
+        }
+    }
+}

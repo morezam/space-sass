@@ -1,0 +1,118 @@
+.header{
+    background-image: linear-gradient(to bottom right, rgba(var(--primary-light), .5), rgba(var(--primary), .5)) , url(../img/quote-back-3.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    &__info{
+        position: absolute;
+        top: 50%;
+        left: 6%;
+        transform: translateY(-50%);
+        z-index: 2;
+        @include device(medlow){
+            width: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__text{
+        font-size: 2.1rem;
+        font-weight: 300;
+        color: #fff;
+        margin: 2rem 0 0 4rem;
+        // border-left: .5rem solid rgba(var(--primary), 1);
+        padding-left: 1rem;
+        @include device(medlow){
+            text-align: center;
+            margin: 2rem 0 0 0;
+        }
+    }
+
+    &__btns{
+        margin: 5rem 4.5rem;
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        @include device(medium){
+            width: 50%;
+        }
+        @include device(medlow){
+            width: 60%;
+            margin-left: 15rem;
+        }
+        @include device(small){
+            width: 70%;
+            font-size: 1.6rem;
+            margin-left: 5rem;
+        }
+    }
+
+    &__btn{
+        // margin: 5rem 4.5rem;
+        text-align: center;
+    }
+
+    &__heading{
+        display: none;
+        @include device(medlow){
+            display: block;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__show{
+        display: block;
+        @include device(medlow){
+            display: none;
+        }    
+    }
+
+
+    &__hero{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__icon{
+        position: absolute;
+        top: 1rem;
+        padding: 1rem .5rem;
+        left: 61%;
+        animation: movetoTop 1.5s ease;
+        // stroke: rgba(var(--primary), 1);
+        stroke: #fff;
+        width: 5.2rem;
+        height: 7.4rem;
+
+        @include device(big){
+            width: 4.2rem;
+            height: 6.4rem;
+        }
+    }
+
+    &__blob{
+        position: absolute;
+        top: -20rem;
+        left: -20rem;
+        @include device(small){
+            display: none;
+        }
+    }
+
+    &__dash{
+        position: absolute;
+        bottom: -22rem;
+        z-index: 1;
+    }
+}
+
+
+
+
+

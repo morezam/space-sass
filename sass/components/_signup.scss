@@ -1,0 +1,77 @@
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include device(big){
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__info{
+        flex: 1;
+    }
+
+    &__heading{
+        text-align: center;
+    }
+
+    &__box{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 55%;
+        background-color: rgba(var(--primary-dark-1), .8);
+        padding: 5rem;
+        border-radius: 5px;
+        margin-right: 15rem;
+
+        @include device(large){
+            margin: 0 0 0 10rem;
+            width: 70%;
+        }
+        @include device(big){
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__input{
+        padding: 1.5rem 1rem;
+        border: 0;
+        border-radius: .3rem;
+        margin: 1rem 0;
+        font-family: inherit;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__label{
+        color: #fff;
+    }
+
+    &__btn{
+        margin-top: 2rem;
+    }
+
+    &__text{
+        margin-top: 6rem;
+    }
+
+    &__shape{
+        position: absolute;
+        right: 2rem;
+
+        @include device(large){
+            display: none;
+        }
+    }
+}

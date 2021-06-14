@@ -1,0 +1,134 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem 2rem;
+    &__right{
+        flex: 2;
+        @include device(small){
+            flex: 1;
+        }
+    }
+    @include device(small){
+        transform: translateX(100%);
+        transition: all .5s;
+        height: 100%;
+        top: 0;
+        right: 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 30rem;
+        background-color: rgba(var(--primary), 1);
+        
+    }
+
+    &__shown{
+        transform: translateX(0);
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        list-style: none;
+        font-size: 1.8rem;
+        font-weight: 300;
+        padding: 2rem 0;
+        @include device(small){
+            flex-direction: column;
+        }
+    }
+
+    &__item{
+        @include device(small){
+            margin-top: 2rem;
+        }
+    }
+
+    &__icon{
+        stroke: #999;
+        transition: all .4s;
+        &:hover{
+            stroke: #fff;
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            color: var(--gray-5);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: inherit;
+            transition: all .4s;
+        }
+
+        &:hover,
+        &:active{
+            color: #fff;
+        }
+    }
+
+    &__left{
+        flex: 1.5;
+        @include device(small){
+            flex: 0;
+            margin-top: 5rem;
+        }
+    }
+    &__scroll{
+        // background-image: linear-gradient(to top left, #282526c2, #4c4559c5);
+        // background-image: linear-gradient(rgba(var(--primary), 0.7), rgba(var(--secondary), 0.6));
+        padding: 0.5rem 2rem;
+        background-color: rgba(var(--primary), 1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    }
+
+    &__menu{
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        z-index: 400;
+        cursor: pointer;
+        display: none;
+
+        @include device(small){
+            display: block;
+        }
+        &-hidden{
+            display: none;
+        }
+    }
+
+    &__close{
+        font-size: 5rem;
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+
+        @include device(small){
+            display: block;
+        }
+    }
+}
+
+.search-click{
+    color: var(--gray-5);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .4s;
+    font-size: inherit;
+
+    &:hover{
+        color: #fff;
+    }
+}

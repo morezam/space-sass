@@ -1,0 +1,23 @@
+{
+  "name": "npro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass sass/main.scss css/style.css -w",
+    "server": "live-server",
+    "start": "npm-run-all --parallel watch server",
+    "compile": "node-sass sass/main.scss css/style.comp.css",
+    "prefix": "postcss css/style.comp.css --use autoprefixer -d css/style.prefix",
+    "compress":"node-sass css/style.prefix/style.comp.css css/style.css --output-style compressed",
+    "build":"npm-run-all compile prefix compress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist":"last 10 versions",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
